@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="icon" type="image/x-icon" href="Zomato_logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="d-flex justify-content-between align-items-center  py-4">
+                <div>
+                    <h3>Zomato</h3>
+                </div>
+                <div >
+                    <ul  class="d-flex align-items-center">
+    
+                        <li>Investor Relations</li>
+                        <li>Add restaurant</li>
+                        <li>Log in</li>
+                        <li>Sign up</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+       
+    </header>
+
+    <main>
+        <section>
+            <div class="banner">
+                <div class="d-flex justify-content-center align-items-center h-100 text-white">
+                    <div class="text-center">
+                        <h4 class="display-4 ">ZOMATO</h4>
+                        <p class="display-6 py-3">Discover the best food & drinks in Ahmedabad </p>
+                        <input type="text" class="form-control" placeholder="Search for restaurant, cuisine or a dish ">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="container py-4 ">
+            
+            
+
+            <div class="row justify-content-between">
+                
+                <div class="card col-4 my-4">
+
+                    <div class="my-3">
+                        <img src="food1.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Burger</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                            <p class="card-price">Price: $10</p> 
+                            <button class="btn btn-primary" onclick="addToCart('Burger', 10)">Order Now</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card col-4 my-4">
+                    
+                    <div class="my-3">
+                    <img src="food2.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p class="card-price">Price: $20</p> 
+                        <button class="btn btn-primary" onclick="addToCart('Pizza', 20)">Order Now</button>
+                    </div>
+                </div>
+                </div>
+                <div class="card col-4 my-4">
+                    <div class="my-3">
+                    <img src="food3.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pan Cake</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <p class="card-price">Price: $60</p> 
+                        <button class="btn btn-primary" onclick="addToCart('Pan Cake', 60)">Order Now</button>
+                    </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="container">
+            <button id="view-cart" class="btn btn-custom btn-primary mb-4">View Cart</button>
+        </div>
+        <div id="cart" class="container" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <h4>Total: $<span id="total-amount">0</span></h4>
+            <button class="btn btn-success mt-3" onclick="checkout()">Checkout</button>
+        </div>
+
+        <div id="checkout-form" class="container" style="display: none;">
+            <div class="w-25">
+
+                <h2 class="mb-4">Delivery Address</h2>
+                <form onsubmit="submitOrder(event)">
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <h4>Order Summary</h4>
+                    <ul id="summary-items"></ul>
+                    <h4>Total: $<span id="summary-total">0</span></h4>
+                    <button type="submit" class="btn btn-primary my-3">Place Order</button>
+                </form>
+            </div>
+        </div>
+
+        
+
+
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+header h3{
+    /* colorred; */
+}
+header nav ul li{
+    margin-left: 20px;
+}
+header{
+   
+}
+main .banner h4{
+    font-weight: bold !important;
+}
+.banner{
+    background-image: url(img1.avif);
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.card img{
+    height: 300px;
+}
+
+
+.card button , .btn-custom{
+    background-color: red;
+    color: white;
+}
+.card button:hover{
+    color: whitesmoke;
+}
